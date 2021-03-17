@@ -1,4 +1,39 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  max-height: 48px;
+}
+
+main {
+  align-self: center;
+}
+
+footer {
+  max-height: 96px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style Navbar elements */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.avatar {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+}
+
+/* Style Footer elements */
+.sitelinks-container {
+  display: flex;
+  justify-content: space-between;
 }
