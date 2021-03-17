@@ -11,6 +11,7 @@ body {
   /* Define Custom Colors */
   --darkgray: #5f6368;
   --gray: #dadce0;
+  --lightgray: #dfe1e5;
   --google-red: #db3236;
   --google-blue: #4885ed;
   --google-green: #3cba54;
@@ -95,30 +96,65 @@ footer p, footer a {
 
 /* Style Main elements */
 
-.searchbox-container {
-  width: 50%;
+form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.searchbox {
-  width: 100%;
+.searchbox-container {
+  width: 50%;
   height: 46px;
   margin: 20px 0;
   border-radius: 25px;
-  border: 1px solid lightgray;
+  border: 1px solid var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbox {
+  width: 90%;
   font-size: 16px;
   color: rgba(0,0,0,.87);
+  border: none;
+  padding-left: 20px;
 }
 
 @media (max-width: 800px) {
   .searchbox-container {
-    width: 100%;
-  }
-  .searchbox {
     width: 80%;
   }
+}
+
+.searchbox-container:hover {
+  box-shadow: 0 1px 5px var(--lightgray);
+  border-color: var(--gray);
+}
+
+input.searchbox:focus {
+  /* Remove focus highlight */
+  outline: none;
+}
+
+.search-icon {
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+}
+
+.search-icon__circle {
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 50%;
+  border: 1px solid var(--darkgray);
+}
+
+.search-icon__line {
+  height: 2px;
+  width: 0.5em;
+  background-color: var(--darkgray);
 }
 
 .btn-container {
