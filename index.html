@@ -36,11 +36,17 @@
       <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
       <!-- searchbox goes here -->
       <form>
-        <input type="text" name="searchbox">
+        <div class="searchbox-container">
+          <div class="search-icon">
+            <div class="search-icon__circle"></div>
+            <div class="search-icon__line"></div>
+          </div>
+          <input type="text" name="searchbox" class="searchbox">
+        </div>
         <!-- search buttons -->
         <div class="btn-container">
-          <button type="submit">Google Search</button>
-          <a href="#">I'm Feeling Lucky</a>
+          <button type="submit" class="btn-search">Google Search</button>
+          <a href="#" class="btn-search">I'm Feeling Lucky</a>
         </div>
       </form>
       <!-- language change buttons -->
@@ -54,16 +60,16 @@
       </div>
     </main>
     <footer>
-      <p>Singapore</p>
+      <p class="country-name">Singapore</p>
       <!-- sitelinks go here -->
       <div class="sitelinks-container">
-        <div class="sitelinks-left">
+        <div class="sitelinks-1">
           <a href="#">About</a>
           <a href="#">Advertising</a>
           <a href="#">Business</a>
           <a href="#">How Search works</a>
         </div>
-        <div class="sitelinks-right">
+        <div class="sitelinks-2">
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
           <a href="#">Settings</a>

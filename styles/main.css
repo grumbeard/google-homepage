@@ -10,6 +10,8 @@ body {
 
   /* Define Custom Colors */
   --darkgray: #5f6368;
+  --gray: #dadce0;
+  --lightgray: #dfe1e5;
   --google-red: #db3236;
   --google-blue: #4885ed;
   --google-green: #3cba54;
@@ -30,15 +32,23 @@ header {
 
 main {
   align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer {
-  max-height: 96px;
   display: flex;
   flex-direction: column;
+  background-color: #f2f2f2;
 }
 
-/* Style Navbar elements */
+footer p, footer a {
+  color: rgba(0,0,0,.54);
+}
+
+/* Style Header elements */
 .navbar {
   margin: 6px;
   padding: 5px;
@@ -84,8 +94,143 @@ footer {
   border: 2px solid #FFF;
 }
 
+/* Style Main elements */
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchbox-container {
+  width: 50%;
+  height: 46px;
+  margin: 20px 0;
+  border-radius: 25px;
+  border: 1px solid var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbox {
+  width: 90%;
+  font-size: 16px;
+  color: rgba(0,0,0,.87);
+  border: none;
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .searchbox-container {
+    width: 80%;
+  }
+}
+
+.searchbox-container:hover {
+  box-shadow: 0 1px 5px var(--lightgray);
+  border-color: var(--gray);
+}
+
+input.searchbox:focus {
+  /* Remove focus highlight */
+  outline: none;
+}
+
+.search-icon {
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+}
+
+.search-icon__circle {
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 50%;
+  border: 1px solid var(--darkgray);
+}
+
+.search-icon__line {
+  height: 2px;
+  width: 0.5em;
+  background-color: var(--darkgray);
+}
+
+.btn-container {
+  height: 70px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-search {
+  display: inline-block;
+  padding: 0 16px;
+  margin: 11px 4px;
+  background-color: #f8f9fa;
+  /* Prevent movement of button when hover adds border */
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  vertical-align: middle;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 3em;
+  color: #3c4043;
+}
+
+.btn-container a:hover, button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--gray);
+}
+
+.language-options-container {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.language-options-container a {
+  color: #1a0dab;
+  padding: 0 3px;
+}
+
+.language-options-container a:visited {
+  color: #609;
+}
+
 /* Style Footer elements */
+.country-name {
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--gray);
+  font-size: 15px;
+}
+
 .sitelinks-container {
   display: flex;
   justify-content: space-between;
+}
+
+.sitelinks-container a {
+  display: inline-block;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.sitelinks-1 {
+  padding-left: 20px;
+}
+
+.sitelinks-2 {
+  padding-right: 20px;
+}
+
+@media (max-width: 800px) {
+  .sitelinks-container {
+    flex-direction: column;
+  }
+  .sitelinks-1, .sitelinks-2 {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
