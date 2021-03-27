@@ -1,5 +1,10 @@
-# google-homepage
+# The Odin Project - Foundations
 
+## PROJECT #1: Google Homepage Clone
+
+**Goal**: Recreate the Google Homepage as part of The Odin Project [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/html-css).
+
+**Live version of clone**
 👉 http://grumbeard.github.io/google-homepage/
 
 This is a clone of the Google Homepage -- To put into use some snazzy HTML/CSS learnt in FreeCodeCamp's Responsive Web Design course.
